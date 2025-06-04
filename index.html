@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aeliosy - Professional Internet Menace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="https://i.imgur.com/3QZvC3p.png"> <!-- Random troll face -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #FF00AA; /* Pink for maximum chaos */
+            --secondary: #00FFAA; /* Toxic green */
+            --accent: #AA00FF; /* Purple because why not */
+            --dark: #121212;
+            --light: #FFF;
+            --font-main: 'Comic Neue', cursive;
+            --font-troll: 'Press Start 2P', cursive;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background: var(--dark);
+            color: var(--light);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-image: 
+                url('https://i.imgur.com/3QZvC3p.png'),
+                linear-gradient(45deg, #000, #222);
+            background-blend-mode: overlay;
+            background-size: 200px;
+            background-attachment: fixed;
+        }
+
+        .troll-card {
+            background: rgba(30, 30, 30, 0.9);
+            border: 5px dashed var(--primary);
+            border-radius: 0;
+            width: 90%;
+            max-width: 500px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 0 30px var(--accent);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .troll-card::before {
+            content: "WARNING: CHAOS INSIDE";
+            position: absolute;
+            top: 10px;
+            left: 0;
+            right: 0;
+            background: var(--secondary);
+            color: #000;
+            font-family: var(--font-troll);
+            font-size: 12px;
+            padding: 5px;
+            transform: rotate(-5deg);
+        }
+
+        h1 {
+            font-family: var(--font-troll);
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin: 30px 0 10px;
+            text-shadow: 0 0 10px var(--accent);
+        }
+
+        h2 {
+            font-family: var(--font-troll);
+            color: var(--secondary);
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px;
+            border: 3px solid var(--primary);
+            border-radius: 0;
+            background: #000;
+            color: var(--light);
+            font-family: var(--font-troll);
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-btn:hover {
+            background: var(--primary);
+            color: #000;
+            transform: rotate(3deg) scale(1.05);
+        }
+
+        .social-btn::after {
+            content: "CLICK ME I DARE YOU";
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            right: 0;
+            font-size: 10px;
+            opacity: 0;
+            transition: all 0.3s;
+        }
+
+        .social-btn:hover::after {
+            bottom: 5px;
+            opacity: 1;
+        }
+
+        .discord-btn { border-color: #5865F2; }
+        .discord-btn:hover { background: #5865F2; }
+
+        .insta-btn { border-color: #E1306C; }
+        .insta-btn:hover { background: #E1306C; }
+
+        .email-btn { border-color: #EA4335; }
+        .email-btn:hover { background: #EA4335; }
+
+        .troll-note {
+            margin-top: 30px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        .troll-note::before {
+            content: "⚠️ ";
+        }
+
+        .random-troll-text {
+            position: absolute;
+            font-size: 10px;
+            color: var(--secondary);
+            transform: rotate(-10deg);
+            opacity: 0.7;
+        }
+
+        .troll-1 { top: 10%; left: 5%; }
+        .troll-2 { bottom: 15%; right: 5%; }
+    </style>
+</head>
+<body>
+    <div class="troll-card">
+        <!-- Random floating troll text -->
+        <div class="random-troll-text troll-1">"I DIDN'T ASK FOR THIS"</div>
+        <div class="random-troll-text troll-2">"WHY ARE YOU STILL HERE?"</div>
+
+        <h1>AELIOSY</h1>
+        <h2>PROFESSIONAL INTERNET TROLL</h2>
+
+        <div class="social-links">
+            <a href="https://discord.com/users/aeliosymine" class="social-btn discord-btn" target="_blank">
+                <i class="fab fa-discord"></i> DISCORD: aeliosymine
+            </a>
+            <a href="https://instagram.com/aeliosymine" class="social-btn insta-btn" target="_blank">
+                <i class="fab fa-instagram"></i> INSTAGRAM: aeliosymine
+            </a>
+            <a href="mailto:aeliosy@deutschland.me" class="social-btn email-btn">
+                <i class="fas fa-envelope"></i> EMAIL: aeliosy@deutschland.me
+            </a>
+        </div>
+
+        <p class="troll-note">
+            Warning: Interacting with this person may result in loss of braincells, spontaneous memes, or unexpected existential crises. Proceed at your own risk.
+        </p>
+    </div>
+
+    <script>
+        // Make buttons even more chaotic on hover
+        document.querySelectorAll('.social-btn').forEach(btn => {
+            btn.addEventListener('mouseover', () => {
+                btn.style.transform = `rotate(${Math.random() * 10 - 5}deg) scale(${1 + Math.random() * 0.2})`;
+            });
+        });
+
+        // Random troll messages that appear when you click anywhere
+        const trollMessages = [
+            "WHY DID YOU CLICK THAT?",
+            "SERIOUSLY, STOP.",
+            "YOU'RE WASTING YOUR TIME.",
+            "GO TOUCH GRASS.",
+            "DID YOU REALLY THINK THAT WOULD DO SOMETHING?",
+            "404 BRAIN NOT FOUND",
+            "THIS WEBSITE IS A PRANK",
+            "YOU'VE BEEN TROLLED",
+            "CONGRATS, YOU PLAYED YOURSELF"
+        ];
+
+        document.body.addEventListener('click', () => {
+            const randomMsg = trollMessages[Math.floor(Math.random() * trollMessages.length)];
+            alert(`🚨 ${randomMsg} 🚨`);
+        });
+    </script>
+</body>
+</html>
