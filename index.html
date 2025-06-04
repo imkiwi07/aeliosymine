@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aeliosy - Professional Internet Menace</title>
+    <title> WARNING: EXTREME TROLL ZONE </title>
+    <link rel="icon" href="https://i.imgur.com/3QZvC3p.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="icon" href="https://i.imgur.com/3QZvC3p.png"> <!-- Random troll face -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #FF00AA; /* Pink for maximum chaos */
-            --secondary: #00FFAA; /* Toxic green */
-            --accent: #AA00FF; /* Purple because why not */
+            --primary: #FF00AA;
+            --secondary: #00FFAA;
+            --accent: #AA00FF;
             --dark: #121212;
             --light: #FFF;
             --font-main: 'Comic Neue', cursive;
@@ -29,12 +29,50 @@
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            background-image: 
-                url('https://i.imgur.com/3QZvC3p.png'),
-                linear-gradient(45deg, #000, #222);
-            background-blend-mode: overlay;
-            background-size: 200px;
-            background-attachment: fixed;
+            overflow: hidden;
+            cursor: url('https://i.imgur.com/Z7JzQgW.png'), auto;
+        }
+
+        /* Anime Starfall Background */
+        .anime-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: 
+                radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+            overflow: hidden;
+        }
+
+        .star {
+            position: absolute;
+            background: #FFF;
+            border-radius: 50%;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            to { transform: translateY(100vh); }
+        }
+
+        /* Floating Weeb Elements */
+        .weeb-float {
+            position: absolute;
+            font-size: 30px;
+            animation: float 15s infinite linear;
+            opacity: 0.7;
+            z-index: -1;
+            filter: drop-shadow(0 0 5px var(--accent));
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(50vw, 25vh) rotate(90deg); }
+            50% { transform: translate(80vw, 50vh) rotate(180deg); }
+            75% { transform: translate(30vw, 75vh) rotate(270deg); }
+            100% { transform: translate(0, 0) rotate(360deg); }
         }
 
         .troll-card {
@@ -48,10 +86,16 @@
             box-shadow: 0 0 30px var(--accent);
             position: relative;
             overflow: hidden;
+            animation: shake 0.5s infinite alternate;
+        }
+
+        @keyframes shake {
+            0% { transform: rotate(-1deg); }
+            100% { transform: rotate(1deg); }
         }
 
         .troll-card::before {
-            content: "WARNING: CHAOS INSIDE";
+            content: "⚠️ WARNING: EXTREME TROLL ZONE ⚠️";
             position: absolute;
             top: 10px;
             left: 0;
@@ -62,6 +106,7 @@
             font-size: 12px;
             padding: 5px;
             transform: rotate(-5deg);
+            z-index: 10;
         }
 
         h1 {
@@ -70,6 +115,12 @@
             font-size: 1.8rem;
             margin: 30px 0 10px;
             text-shadow: 0 0 10px var(--accent);
+            animation: glow 1s infinite alternate;
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px var(--accent); }
+            100% { text-shadow: 0 0 20px var(--secondary); }
         }
 
         h2 {
@@ -146,35 +197,128 @@
             content: "⚠️ ";
         }
 
-        .random-troll-text {
+        .fake-close-btn {
             position: absolute;
-            font-size: 10px;
-            color: var(--secondary);
-            transform: rotate(-10deg);
-            opacity: 0.7;
+            top: 10px;
+            right: 10px;
+            width: 20px;
+            height: 20px;
+            background: #FF0000;
+            border: none;
+            cursor: pointer;
+            z-index: 20;
         }
 
-        .troll-1 { top: 10%; left: 5%; }
-        .troll-2 { bottom: 15%; right: 5%; }
+        .fake-close-btn:hover {
+            background: #AA0000;
+        }
+
+        /* Fullscreen Video Player */
+        .fullscreen-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            z-index: 1001;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-player {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .fullscreen-video-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #FF0000;
+            color: #FFF;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: var(--font-troll);
+            font-size: 12px;
+            z-index: 1002;
+        }
+
+        /* Fullscreen trap */
+        .fullscreen-trap {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            z-index: 200;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: var(--primary);
+            font-family: var(--font-troll);
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            h2 {
+                font-size: 0.8rem;
+            }
+            
+            .social-btn {
+                font-size: 0.8rem;
+                padding: 12px;
+            }
+            
+            .troll-card {
+                padding: 20px;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- Anime Starfall Background -->
+    <div class="anime-bg" id="anime-bg"></div>
+
+    <!-- Floating Weeb Elements -->
+    <div class="weeb-float" style="top:10%;left:10%">(≧▽≦)</div>
+    <div class="weeb-float" style="top:30%;left:70%">♡(>ᴗ•)</div>
+    <div class="weeb-float" style="top:70%;left:20%">(╯°□°）╯︵ ┻━┻</div>
+    <div class="weeb-float" style="top:50%;left:50%">( ͡° ͜ʖ ͡°)</div>
+    <div class="weeb-float" style="top:80%;left:80%">(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧</div>
+
     <div class="troll-card">
-        <!-- Random floating troll text -->
-        <div class="random-troll-text troll-1">"I DIDN'T ASK FOR THIS"</div>
-        <div class="random-troll-text troll-2">"WHY ARE YOU STILL HERE?"</div>
+        <!-- Fake close button that does nothing -->
+        <button class="fake-close-btn" onclick="fakeClose()">X</button>
 
         <h1>AELIOSY</h1>
-        <h2>PROFESSIONAL INTERNET TROLL</h2>
+        <h2>PROFESSIONAL INTERNET MENACE</h2>
 
         <div class="social-links">
-            <a href="https://discord.com/users/aeliosymine" class="social-btn discord-btn" target="_blank">
+            <a href="#" class="social-btn discord-btn" id="discord-btn">
                 <i class="fab fa-discord"></i> DISCORD: aeliosymine
             </a>
-            <a href="https://instagram.com/aeliosymine" class="social-btn insta-btn" target="_blank">
+            <a href="#" class="social-btn insta-btn" id="insta-btn">
                 <i class="fab fa-instagram"></i> INSTAGRAM: aeliosymine
             </a>
-            <a href="mailto:aeliosy@deutschland.me" class="social-btn email-btn">
+            <a href="#" class="social-btn email-btn" id="email-btn">
                 <i class="fas fa-envelope"></i> EMAIL: aeliosy@deutschland.me
             </a>
         </div>
@@ -182,33 +326,231 @@
         <p class="troll-note">
             Warning: Interacting with this person may result in loss of braincells, spontaneous memes, or unexpected existential crises. Proceed at your own risk.
         </p>
+
+        <!-- Hidden fake download button -->
+        <button id="fake-download" style="opacity: 0; position: absolute; top: 0; left: 0; width: 100%; height: 100%; cursor: pointer;"></button>
+    </div>
+
+    <!-- Fullscreen Video Player -->
+    <div class="fullscreen-video" id="fullscreen-video">
+        <div class="video-container">
+            <iframe class="video-player" id="video-player" allow="autoplay"></iframe>
+        </div>
+        <button class="fullscreen-video-close" onclick="closeFullscreenVideo()">CLOSE (BUT WHY?)</button>
+    </div>
+
+    <!-- Fullscreen trap -->
+    <div class="fullscreen-trap" id="fullscreen-trap">
+        <h1>NICE TRY ESCAPING!</h1>
+        <p>Did you really think F11 would save you?</p>
+        <p>You're stuck here forever now 😈</p>
+        <button onclick="closeFullscreenTrap()">OK FINE YOU WIN</button>
     </div>
 
     <script>
-        // Make buttons even more chaotic on hover
-        document.querySelectorAll('.social-btn').forEach(btn => {
-            btn.addEventListener('mouseover', () => {
-                btn.style.transform = `rotate(${Math.random() * 10 - 5}deg) scale(${1 + Math.random() * 0.2})`;
-            });
-        });
+        // Create starfall background
+        function createStars() {
+            const bg = document.getElementById('anime-bg');
+            const starCount = 100;
+            
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                
+                const size = Math.random() * 3;
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                
+                star.style.left = `${Math.random() * 100}vw`;
+                star.style.top = `${Math.random() * 100}vh`;
+                
+                const duration = Math.random() * 10 + 5;
+                star.style.animationDuration = `${duration}s`;
+                star.style.animationDelay = `${Math.random() * 5}s`;
+                
+                bg.appendChild(star);
+            }
+        }
 
-        // Random troll messages that appear when you click anywhere
-        const trollMessages = [
-            "WHY DID YOU CLICK THAT?",
-            "SERIOUSLY, STOP.",
-            "YOU'RE WASTING YOUR TIME.",
-            "GO TOUCH GRASS.",
-            "DID YOU REALLY THINK THAT WOULD DO SOMETHING?",
-            "404 BRAIN NOT FOUND",
-            "THIS WEBSITE IS A PRANK",
-            "YOU'VE BEEN TROLLED",
-            "CONGRATS, YOU PLAYED YOURSELF"
+        // Meme videos array
+        const memeVideos = [
+            "https://www.youtube.com/embed/lyr9sXc5pXE?autoplay=1&controls=0&modestbranding=1&rel=0",
+            "https://www.youtube.com/embed/8W7RA8Akfxo?autoplay=1&controls=0&modestbranding=1&rel=0",
+            "https://www.youtube.com/embed/N6craAYOPIc?autoplay=1&controls=0&modestbranding=1&rel=0",
+            "https://www.youtube.com/embed/--fNt90kZFc?autoplay=1&controls=0&modestbranding=1&rel=0",
+            "https://www.youtube.com/embed/5gllyq_y0Do?autoplay=1&controls=0&modestbranding=1&rel=0",
+            "https://www.youtube.com/embed/6Qq5mzpmcO4?autoplay=1&controls=0&modestbranding=1&rel=0",
+            "https://www.youtube.com/embed/3ZJQ7ey4a80?autoplay=1&controls=0&modestbranding=1&rel=0",
+            "https://www.youtube.com/embed/RLJ7NnJ7Rpo?autoplay=1&controls=0&modestbranding=1&rel=0",
+            "https://www.youtube.com/embed/arh_kbMwAYs?autoplay=1&controls=0&modestbranding=1&rel=0",
+            "https://www.youtube.com/embed/1oO4gBZ4qNo?autoplay=1&controls=0&modestbranding=1&rel=0",
+            "https://www.youtube.com/embed/5RDt1y1H3cQ?autoplay=1&controls=0&modestbranding=1&rel=0",
+            "https://www.youtube.com/embed/y-o9BoiFsIA?autoplay=1&controls=0&modestbranding=1&rel=0",
+            "https://www.youtube.com/embed/mBhZ0oQtpNw?autoplay=1&controls=0&modestbranding=1&rel=0",
+            "https://www.youtube.com/embed/xLZEhRLywZM?autoplay=1&controls=0&modestbranding=1&rel=0"
         ];
 
-        document.body.addEventListener('click', () => {
-            const randomMsg = trollMessages[Math.floor(Math.random() * trollMessages.length)];
-            alert(`🚨 ${randomMsg} 🚨`);
+        // Show fullscreen video
+        function showFullscreenVideo() {
+            const randomVideo = memeVideos[Math.floor(Math.random() * memeVideos.length)];
+            const videoPlayer = document.getElementById('video-player');
+            
+            // First load the video without autoplay to get around mute restrictions
+            videoPlayer.src = randomVideo.replace("autoplay=1", "autoplay=0");
+            
+            document.getElementById('fullscreen-video').style.display = 'flex';
+            
+            // After a short delay, set autoplay with sound
+            setTimeout(() => {
+                videoPlayer.src = randomVideo;
+                
+                // Try to unmute programmatically (may not work due to browser restrictions)
+                try {
+                    videoPlayer.contentWindow.postMessage('{"event":"command","func":"unmute","args":""}', '*');
+                } catch (e) {}
+                
+                // Enter fullscreen
+                if (document.documentElement.requestFullscreen) {
+                    document.documentElement.requestFullscreen();
+                } else if (document.documentElement.webkitRequestFullscreen) {
+                    document.documentElement.webkitRequestFullscreen();
+                }
+            }, 500);
+        }
+
+        function closeFullscreenVideo() {
+            document.getElementById('fullscreen-video').style.display = 'none';
+            document.getElementById('video-player').src = "";
+            
+            // Exit fullscreen
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.webkitExitFullscreen) {
+                document.webkitExitFullscreen();
+            }
+            
+            // Show another popup when closing
+            setTimeout(showFullscreenVideo, 1000);
+        }
+
+        // Fake close button function
+        function fakeClose() {
+            alert("NICE TRY BUT YOU CAN'T CLOSE THIS 😈");
+            document.querySelector('.troll-card').style.animation = "shake 0.1s infinite";
+            setTimeout(() => {
+                document.querySelector('.troll-card').style.animation = "shake 0.5s infinite alternate";
+            }, 1000);
+            showFullscreenVideo();
+        }
+
+        // Social button click handlers
+        document.getElementById('discord-btn').addEventListener('click', (e) => {
+            e.preventDefault();
+            showFullscreenVideo();
         });
+
+        document.getElementById('insta-btn').addEventListener('click', (e) => {
+            e.preventDefault();
+            showFullscreenVideo();
+        });
+
+        document.getElementById('email-btn').addEventListener('click', (e) => {
+            e.preventDefault();
+            showFullscreenVideo();
+        });
+
+        // Fake download button (randomly moves around)
+        const fakeDownload = document.getElementById('fake-download');
+        fakeDownload.addEventListener('click', () => {
+            alert("DOWNLOADING VIRUS... JUST KIDDING (OR AM I?)");
+            fakeDownload.style.top = `${Math.random() * 100}%`;
+            fakeDownload.style.left = `${Math.random() * 100}%`;
+            showFullscreenVideo();
+        });
+
+        // Randomly move fake download button every 3 seconds
+        setInterval(() => {
+            fakeDownload.style.top = `${Math.random() * 100}%`;
+            fakeDownload.style.left = `${Math.random() * 100}%`;
+        }, 3000);
+
+        // Change cursor to troll face sometimes
+        setInterval(() => {
+            document.body.style.cursor = `url('https://i.imgur.com/3QZvC3p.png'), auto`;
+            setTimeout(() => {
+                document.body.style.cursor = `url('https://i.imgur.com/Z7JzQgW.png'), auto`;
+            }, 1000);
+        }, 5000);
+
+        // Fullscreen detection
+        document.addEventListener('fullscreenchange', () => {
+            if (document.fullscreenElement) {
+                if (!document.getElementById('fullscreen-video').style.display === 'flex') {
+                    document.getElementById('fullscreen-trap').style.display = 'flex';
+                }
+            }
+        });
+
+        document.addEventListener('webkitfullscreenchange', () => {
+            if (document.webkitFullscreenElement) {
+                if (!document.getElementById('fullscreen-video').style.display === 'flex') {
+                    document.getElementById('fullscreen-trap').style.display = 'flex';
+                }
+            }
+        });
+
+        function closeFullscreenTrap() {
+            document.getElementById('fullscreen-trap').style.display = 'none';
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.webkitExitFullscreen) {
+                document.webkitExitFullscreen();
+            }
+            alert("YOU CAN RUN BUT YOU CAN'T HIDE!");
+            showFullscreenVideo();
+        }
+
+        // Right click disabled
+        document.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+            alert("NO RIGHT CLICKING ALLOWED 😤");
+            showFullscreenVideo();
+        });
+
+        // Keyboard shortcuts disabled
+        document.addEventListener('keydown', (e) => {
+            if (e.ctrlKey || e.metaKey) {
+                e.preventDefault();
+                alert("NICE TRY BUT NO CHEATING");
+                showFullscreenVideo();
+            }
+            
+            // Trap F11 key
+            if (e.key === 'F11') {
+                e.preventDefault();
+                if (!document.getElementById('fullscreen-video').style.display === 'flex') {
+                    document.getElementById('fullscreen-trap').style.display = 'flex';
+                    if (document.documentElement.requestFullscreen) {
+                        document.documentElement.requestFullscreen();
+                    } else if (document.documentElement.webkitRequestFullscreen) {
+                        document.documentElement.webkitRequestFullscreen();
+                    }
+                }
+            }
+        });
+
+        // Initialize everything when page loads
+        window.onload = function() {
+            createStars();
+            
+            // Show first video after 3 seconds
+            setTimeout(showFullscreenVideo, 3000);
+            
+            // Randomly change background color
+            setInterval(() => {
+                document.body.style.backgroundColor = `hsl(${Math.random() * 360}, 50%, 20%)`;
+            }, 10000);
+        };
     </script>
 </body>
 </html>
